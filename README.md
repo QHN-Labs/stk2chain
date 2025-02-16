@@ -1,5 +1,5 @@
 #  A GSM-Based Protocol for Expanding Blockchain Accessibility
----#
+---
 
 SMS2Chain is a protocol designed to `bridge GSM technologies` with `blockchain systems`. It leverages the ubiquitous nature of `SIM cards` and `SMS messaging` to enable seamless `transactions`, `wallet management`, and `smart contract interactions` `without requiring an internet connection`. At its core, SMS2Chain allows users to perform blockchain-based operations via familiar mobile interfaces such as STK menus, making blockchain more accessible to underserved demographics and areas with limited internet access.
 
