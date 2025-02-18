@@ -22,8 +22,8 @@ graph LR
 ### eSIM Profile Architecture
 ```
 ┌───────────────────────────┐
-│ eSIM Profile Elements │
-│─────────────│
+│   eSIM Profile Elements   │
+│────────────────│
 │  • eUICC Network Config   │
 │  • STK Interface          │
 │    └ Java Card Applet     │
