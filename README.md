@@ -23,7 +23,7 @@ graph LR
 ```
 ┌───────────────────────────┐
 │   eSIM Profile Elements   │
-│────────────────│
+│───────────────────────────│
 │  • eUICC Network Config   │
 │  • STK Interface          │
 │    └ Java Card Applet     │
