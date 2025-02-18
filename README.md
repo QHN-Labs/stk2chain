@@ -1,7 +1,7 @@
 #  A GSM-Based Protocol for Expanding Blockchain Accessibility
 ---
 
-SMS2Chain is a protocol designed to `bridge GSM technologies` with `blockchain systems`. It leverages the ubiquitous nature of `SIM cards` and `SMS messaging` to enable seamless `transactions`, `wallet management`, and `smart contract interactions` `without requiring an internet connection`. At its core, SMS2Chain allows users to perform blockchain-based operations via familiar mobile interfaces such as STK menus, making blockchain more accessible to underserved demographics and areas with limited internet access.
+STKS2Chain is a protocol designed to `bridge GSM technologies` with `blockchain systems`. It leverages the ubiquitous nature of `SIM cards` and `SMS messaging` to enable seamless `transactions`, `wallet management`, and `smart contract interactions` `without requiring an internet connection`. At its core, STK2Chain allows users to perform blockchain-based operations via familiar mobile interfaces such as STK menus, making blockchain more accessible to underserved demographics and areas with limited internet access.
 
 ---
 
@@ -11,8 +11,8 @@ graph LR
   A(Start)
 
     A[STK Menu] --> B[GSM Tower]
-    B --> C[STK2Chain Middleware]
-    C --> D[Ethereum Node]
+    B --> C[STK2Chain Middleware (ERC-4337 Bundler)]
+    C --> D[Ethereum Node (ERC-4337 EntryPoint)]
     D -->|TX Hash| C
     C -->|SMS Confirm| A
 ```
@@ -27,7 +27,7 @@ graph LR
 │  • eUICC Network Config   │
 │  • STK Interface          │
 │    └ Java Card Applet     │
-│  • HD Wallet (stk2wallet) │
+│  • HD Wallet [stk2wallet](https://github.com/QHN-Labs/stk2wallet) │
 └───────────────────────────┘
 ```
 
