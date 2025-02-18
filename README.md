@@ -11,8 +11,8 @@ graph LR
   A(Start)
 
     A[STK Menu] --> B[GSM Tower]
-    B --> C[STK2Chain Middleware (ERC-4337 Bundler)]
-    C --> D[Ethereum Node (ERC-4337 EntryPoint)]
+    B --> C[STK2Chain Middleware ERC-4337 Bundler]
+    C --> D[Ethereum Node ERC-4337 EntryPoint]
     D -->|TX Hash| C
     C -->|SMS Confirm| A
 ```
@@ -22,12 +22,12 @@ graph LR
 ### eSIM Profile Architecture
 ```
 ┌───────────────────────────┐
-│         eSIM Profile      │
-│───────────────────────────│
+│        eSIM Profile Elements │
+│─────────────│
 │  • eUICC Network Config   │
 │  • STK Interface          │
 │    └ Java Card Applet     │
-│  • HD Wallet [stk2wallet](https://github.com/QHN-Labs/stk2wallet) │
+│  • HD Wallet [stk2wallet] │
 └───────────────────────────┘
 ```
 
