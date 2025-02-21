@@ -7,12 +7,16 @@ STKS2Chain is a protocol designed to `bridge GSM technologies` with `blockchain 
 
 ### How it works
 ```mermaid
+
 graph LR
   A(Start)
 
-    A[STK Menu] --> B[GSM Tower]
-    B --> C[STK2Chain Middleware ERC-4337 Bundler]
-    C --> D[Ethereum Node ERC-4337 EntryPoint]
+    A[STK Menu] --> B["GSM Tower Network
+    (Carrier BTS)"]
+    B --> C["STK2Chain Middleware
+    (ERC-4337 Bundler)"]
+    C --> D["Ethereum Node
+    (ERC-4337 EntryPoint)"]
     D -->|TX Hash| C
     C -->|SMS Confirm| A
 ```
