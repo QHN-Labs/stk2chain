@@ -37,7 +37,7 @@ graph LR
 
 
 ┌──────────────────────────────┐
-│       eSIM Profile (TEE)       │
+│       eSIM Profile (TEE)     │
 │──────────────────────────────│
 │ 1. eUICC (Secure Element)    │ ← Hardware root of trust
 │ 2. Java Card Applet          │ ← Isolated execution
