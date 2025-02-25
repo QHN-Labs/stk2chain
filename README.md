@@ -33,6 +33,16 @@ graph LR
 │    └ Java Card Applet     │
 │  • HD Wallet [stk2wallet] │
 └───────────────────────────┘
+
+
+
+┌──────────────────────────────┐
+│       eSIM Profile (TEE)         │
+│──────────────────────────────│
+│ 1. eUICC (Secure Element) │ ← Hardware root of trust
+│ 2. Java Card Applet          │ ← Isolated execution
+│ 3. ERC-4337 Wallet Logic     │ ← Code integrity
+└──────────────────────────────┘
 ```
 
 
