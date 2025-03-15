@@ -37,7 +37,7 @@ No seed phrases. Keys are generated and stored `exclusively` within the eUICC Se
 2. Keys are stored `exclusively` within the eUICC Secure Element ( hardware root of trust )
 3. No seed phrases - keys never leave the Secure Element.
 4. Keys cannot be read external of applet's Java Card VM (isolated execution environment)
-5. Java VM Default exclusive:
+5. Java Card VM Default exclusive:
       - Access Policy is by default exclusive to the applet signature
       - 2 applets by default cannot share the same signature
       - All is erased when applet is erased
@@ -99,27 +99,27 @@ STK Menu implements a Text-Based User Interface for:
 					"display_name": "Send ETH",
 					"next_screen": "SendETHScreen"
 				},
-                "SwapOption": {
-                    "option": "2",
+                        "SwapOption": {
+                              "option": "2",
 					"display_name": "Swap",
 					"next_screen": "SwapScreen"
 				},
-                "WithdrawOption": {
+                        "WithdrawOption": {
 					"option": "3",
 					"display_name": "Withdraw Cash",
 					"next_screen": "WithdrawScreen"
 				},
-			    "AirtimeOption": {
+			      "AirtimeOption": {
 					"option": "4",
 					"display_name": "Buy Airtime",
 					"next_screen": "AirtimeScreen"
 				},
-                "AccountOption": {
+                        "AccountOption": {
 					"option": "5",
 					"display_name": "My Account",
 					"next_screen": "AccountScreen"
 				},
-               "BalanceOption": {
+                        "BalanceOption": {
 					"option": "6",
 					"display_name": "Balance",
 					"next_screen": "BalanceScreen"
