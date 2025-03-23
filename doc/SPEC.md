@@ -10,4 +10,4 @@ This doc specifies the STK2ETH protocol, including the USSD-ETH Gateway (short: 
 
 ## Protocol
 
-- [**JavaCard Applet (eSTK)**](./specs/applet.md) - The STK2ETH JavaCard Applet.
+- [**Java Card Applet (eSTK)**](./specs/applet.md) - The STK2ETH JavaCard Applet.
