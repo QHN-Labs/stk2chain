@@ -1,0 +1,53 @@
+#!/usr/bin/env python3
+import re
+import sys
+import subprocess
+
+# ------------------ CONFIG ------------------------ #
+TYPE = r"(feat|fix|enhance|chore|docs|test|style)"
+SCOPE = r"(javacard|gateway|contract|euicc|ci|benchmark)"
+ISSUE_ID = r"\d+"
+DESC = r"[a-z0-9]+(?:-[a-z0-9]+)*"
+
+# Syntax: <type>/<scope>-issueID-<atomic_issue_desc>
+BRANCH_PATTERN = rf"^{TYPE}/{SCOPE}-{ISSUE_ID}-{DESC}$"
+# ------------------------------  ------------------ #
+
+
+def get_current_branch() -> str:
+    try:
+        return subprocess.check_output(
+            ["git", "symbolic-ref", "--short", "HEAD"],
+            stderr=subprocess.DEVNULL
+        ).decode().strip()
+    except subprocess.CalledProcessError:
+        return ""
+
+
+def error_invalid_branch(branch: str):
+    print(f"❌ INVALID BRANCH NAME: '{branch}'")
+    print("➡  Expected format: <type>/<scope>-<issueID>-<desc>")
+    print("   Example: fix/gateway-77-suppress-duplicate-events")
+    print("Where:")
+    print("  type    ∈ feat|fix|enhance|chore|docs|test|style")
+    print("  scope   ∈ javacard|gateway|contract|euicc|ci|benchmark")
+    print("  issueID ∈ digits")
+    print("  desc    ∈ issue-case\n")
+    print("")
+    print("You may keep this branch, but cannot work from it until renamed.")
+    print("💡 Rename & checkout using: git checkout -b <new-valid-branch-name>")
+    print("")
+
+
+def validate_branch():
+    branch = get_current_branch()
+    if not re.fullmatch(BRANCH_PATTERN, branch):
+        error_invalid_branch(branch)
+        sys.exit(1)
+
+
+def main():
+    validate_branch()
+
+if __name__ == "__main__":
+    main()
